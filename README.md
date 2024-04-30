@@ -20,3 +20,6 @@ Add this attribute in the MainActivity
 
 For more detailed documentation, see the [BottomTab](./Readme/BottomTab.md).
 
+![BottomTab](https://github.com/sarguru1981/Coffee_Xpress/assets/4471129/3c1758ac-a934-4b27-a34e-fce133f0f5ac)
+
+
