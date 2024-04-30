@@ -72,7 +72,7 @@
 		74D59A6C2E43420CBEEEE062 /* macchiato_pic_3_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A3ED92CAFB4FA998E138A2 /* macchiato_pic_3_square.png */; };
 		5F86E53FDFBA417481BA9688 /* robusta_coffee_beans_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E48DDC7B86C4A9ABF835262 /* robusta_coffee_beans_portrait.png */; };
 		7EC2C041FE1549B1A0B359C5 /* robusta_coffee_beans_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 44A97EFF84E34578B7542C93 /* robusta_coffee_beans_square.png */; };
-		36D15B8E4A464D678953FEFE /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4703D8518CB412E86156BE9 /* icomoon.ttf */; };
+		5E1A2E9793CA4D3E9871809D /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3392354B9EE4EDBA4AE2A0F /* icomoon.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,7 +162,7 @@
 		04A3ED92CAFB4FA998E138A2 /* macchiato_pic_3_square.png */ = {isa = PBXFileReference; name = "macchiato_pic_3_square.png"; path = "../src/assets/coffee_assets/macchiato/square/macchiato_pic_3_square.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		1E48DDC7B86C4A9ABF835262 /* robusta_coffee_beans_portrait.png */ = {isa = PBXFileReference; name = "robusta_coffee_beans_portrait.png"; path = "../src/assets/coffee_assets/robusta_coffee_beans/robusta_coffee_beans_portrait.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		44A97EFF84E34578B7542C93 /* robusta_coffee_beans_square.png */ = {isa = PBXFileReference; name = "robusta_coffee_beans_square.png"; path = "../src/assets/coffee_assets/robusta_coffee_beans/robusta_coffee_beans_square.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A4703D8518CB412E86156BE9 /* icomoon.ttf */ = {isa = PBXFileReference; name = "icomoon.ttf"; path = "../src/assets/fonts/icomoon.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F3392354B9EE4EDBA4AE2A0F /* icomoon.ttf */ = {isa = PBXFileReference; name = "icomoon.ttf"; path = "../src/assets/fonts/icomoon.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,7 +330,7 @@
 				04A3ED92CAFB4FA998E138A2 /* macchiato_pic_3_square.png */,
 				1E48DDC7B86C4A9ABF835262 /* robusta_coffee_beans_portrait.png */,
 				44A97EFF84E34578B7542C93 /* robusta_coffee_beans_square.png */,
-				A4703D8518CB412E86156BE9 /* icomoon.ttf */,
+				F3392354B9EE4EDBA4AE2A0F /* icomoon.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -489,7 +489,7 @@
 				74D59A6C2E43420CBEEEE062 /* macchiato_pic_3_square.png in Resources */,
 				5F86E53FDFBA417481BA9688 /* robusta_coffee_beans_portrait.png in Resources */,
 				7EC2C041FE1549B1A0B359C5 /* robusta_coffee_beans_square.png in Resources */,
-				36D15B8E4A464D678953FEFE /* icomoon.ttf in Resources */,
+				5E1A2E9793CA4D3E9871809D /* icomoon.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
