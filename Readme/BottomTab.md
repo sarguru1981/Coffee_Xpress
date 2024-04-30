@@ -36,3 +36,5 @@ In this section, I will explain you what is been done for designing the animated
 ### App.tsx
 
 Add the tab navigation in the App.tsx file
+
+![BottomTab](https://github.com/sarguru1981/Coffee_Xpress/assets/4471129/bfb48d12-aaaa-4fde-9400-5df83847b7c4)
