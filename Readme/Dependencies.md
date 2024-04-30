@@ -6,7 +6,7 @@ This documentation tells about the dependencies needs for the application with t
 | Navigation  | Handling navigation  | npm install react-native-screens react-native-safe-area-context  |
 | Stack Navigation  | Navigation between screens where each new screen is placed on top of a stack  | npm install @react-navigation/native-stack  |
 | Bottom Tab  | A simple tab bar on the bottom of the screen  | npm install @react-navigation/bottom-tabs  |
-| Vector Icons  | customizable vector icons  | npm i react-native-vector-icons  |
+| Vector Icons  | customizable vector icons  | npm i --save-dev @types/react-native-vector-icons  |
 | ReAnimation  | ReAnimation (**See below for further setup**)  | npm i react-native-reanimated  |
 | NativeWind  | NativeWind uses Tailwind CSS as scripting language to create a universal style system   | (**See below for further setup**)  |
 | Linear Gradient  | Linear Gradient for element  | npm i react-native-linear-gradient  |
@@ -15,6 +15,7 @@ This documentation tells about the dependencies needs for the application with t
 | Zustand  | State management  | npm i zustand  |
 | Async Storage  | An asynchronous, unencrypted, persistent, key-value storage system for React Native.  | npm i @react-native-async-storage/async-storage  |
 | Animatable  | Animation  | npm i react-native-animatable  |
+| Immer  | Handling immutable data structures  | npm i immer  |
 
 **Note:** New dependencies can be added in the future and will be modified here
 

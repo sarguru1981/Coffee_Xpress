@@ -13,5 +13,10 @@ For more detailed documentation, see the [Environment Setup](./Readme/Environmen
 
 Add this attribute in the MainActivity
 
-```xml
-android:screenOrientation="portrait"
+    ```xml
+    android:screenOrientation="portrait"
+
+## Step 3: Designing the Bottom Tab Bar
+
+For more detailed documentation, see the [BottomTab](./Readme/BottomTab.md).
+
