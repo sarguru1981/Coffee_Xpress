@@ -23,3 +23,6 @@ Based on the selected categories, the related products will be displayed from Co
 In this section, the business logic for add to cart, calculate the cart product price, adding and removing favorite are developed in the **store.ts** file but is not called from the respective place.
 
 **Note:** The UI and business logic may change in the future based on the requirement.
+
+![HomeScreen](https://github.com/sarguru1981/Coffee_Xpress/assets/4471129/235e33cd-2dbd-40d0-8857-9928aee8e3b1)
+
