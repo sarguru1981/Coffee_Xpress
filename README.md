@@ -32,3 +32,5 @@ For more detailed documentation, see the [HeaderBar](./Readme/HeaderBar.md).
 ## Step 5: Designing the Home Screen and Developing business logic
 
 For more detailed documentation, see the [HomeScreen](./Readme/HomeScreen.md).
+
+![HomeScreen](https://github.com/sarguru1981/Coffee_Xpress/assets/4471129/235e33cd-2dbd-40d0-8857-9928aee8e3b1)
