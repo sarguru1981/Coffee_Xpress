@@ -4,31 +4,32 @@ import { COLORS, FONTFAMILY, FONTSIZE, SPACING } from '../../../util/themes/them
 import GradientBGIcon from './gradient_bg_icon';
 import ProfilePicture from './profile_picture';
 
+
 interface HeaderBarProps {
     title?: string;
 }
 
 const HeaderBar: React.FC<HeaderBarProps> = ({title}) => {
   return (
-    <View style={styles.HeaderContainer}>
+    <View style={styles.header_container}>
         <GradientBGIcon 
             name='menu'
             color={COLORS.primaryLightGreyHex}
             size={FONTSIZE.size_16}/>
-        <Text style={styles.HeaderText}>Home Screen</Text>   
+        <Text style={styles.header_title}>{title}</Text>   
         <ProfilePicture/>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-    HeaderContainer: {
+    header_container: {
         padding: SPACING.space_30,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
       },
-      HeaderText: {
+      header_title: {
         fontFamily: FONTFAMILY.poppins_semibold,
         fontSize: FONTSIZE.size_20,
         color: COLORS.primaryWhiteHex,

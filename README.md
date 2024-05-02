@@ -28,3 +28,7 @@ For more detailed documentation, see the [BottomTab](./Readme/BottomTab.md).
 For more detailed documentation, see the [HeaderBar](./Readme/HeaderBar.md).
 
 <img width="422" alt="Screenshot 2024-04-30 at 9 01 55 PM" src="https://github.com/sarguru1981/Coffee_Xpress/assets/4471129/06c5758a-9156-4dfa-8b54-bcf8d4749de6">
+
+## Step 5: Designing the Home Screen and Developing business logic
+
+For more detailed documentation, see the [HomeScreen](./Readme/HomeScreen.md).
