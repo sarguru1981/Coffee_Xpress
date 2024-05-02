@@ -1,17 +1,28 @@
 import { StyleSheet, Image, View } from 'react-native'
 import React from 'react'
-import { COLORS, SPACING } from '../../../util/themes/theme'
+import { COLORS, FONTSIZE, SPACING } from '../../../util/themes/theme'
+import CustomIcon from './custom_icon';
 
 const ProfilePicture = () => {
   return (
-    <View style={styles.image_container}>
-      <Image source={require('../../../assets/app_images/avatar.png')}
-        style={styles.image_style}/>
+    <View style={styles.main_container}>
+      <CustomIcon name='cart' color={COLORS.primaryLightGreyHex} size={SPACING.space_24}/>
+      <View style={styles.image_container}>
+        <Image source={require('../../../assets/app_images/avatar.png')}
+          style={styles.image_style}/>
+      </View>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
+    main_container: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: SPACING.space_30,
+    
+    },
     image_container: {
         height: SPACING.space_36,
         width: SPACING.space_36,

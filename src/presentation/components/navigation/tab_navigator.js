@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
         borderRadius: 16,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: COLORS.primaryWhiteHex,
+        backgroundColor: COLORS.primaryBlackRGBA,
         borderTopColor: 'transparent',
         elevation: 0,
     },

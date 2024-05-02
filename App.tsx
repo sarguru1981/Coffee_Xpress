@@ -6,6 +6,7 @@ import HomeScreen from './src/presentation/features/home/home_screen';
 import CartScreen from './src/presentation/features/cart/cart_screen';
 import PaymentScreen from './src/presentation/features/payment/payment_screen';
 import TabNavigator from './src/presentation/components/navigation/tab_navigator';
+import ProductDetailScreen from './src/presentation/features/product/product_detail_screen';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,6 +20,7 @@ const App = () => {
           options={{animation: 'slide_from_bottom'}}></Stack.Screen>
         <Stack.Screen name='cart' component={CartScreen} options={{animation: 'slide_from_bottom'}}/>
         <Stack.Screen name='payment' component={PaymentScreen} options={{animation: 'slide_from_bottom'}}/>
+        <Stack.Screen name='details' component={ProductDetailScreen} options={{animation: 'slide_from_bottom'}}/>
       </Stack.Navigator>
     </NavigationContainer>
   )
