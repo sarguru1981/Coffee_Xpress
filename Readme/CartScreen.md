@@ -23,3 +23,4 @@ Make sure you have the Coffee Xpress app installed on your device.
 
 9. **Proceed to Checkout**: Once you have added all the products you want to purchase to the cart, tap on the "Pay" button to move to the Payment Screen.
 
+![cart](https://github.com/sarguru1981/Coffee_Xpress/assets/4471129/91332ea5-4865-44fc-8314-3cab2cd31c49)
