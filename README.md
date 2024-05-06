@@ -35,4 +35,12 @@ For more detailed documentation, see the [HomeScreen](./Readme/HomeScreen.md).
 
 ![HomeScreen](https://github.com/sarguru1981/Coffee_Xpress/assets/4471129/235e33cd-2dbd-40d0-8857-9928aee8e3b1)
 
+## Step 6: Designing the Product detail Screen and Developing business logic
+
+The business logic for Add to cart from Home scree and Product detail screen is implemented. The favoriting the product functionality is implemented
+
+For more detailed documentation, see the [Product Detail](./Readme/ProductDetail.md).
+
+![ProductDetail](https://github.com/sarguru1981/Coffee_Xpress/assets/4471129/864f344b-24ed-4a89-ad41-9893c9de59dc)
+
 
