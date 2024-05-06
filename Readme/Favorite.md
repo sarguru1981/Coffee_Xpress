@@ -32,3 +32,5 @@ The Favorites Item Card component represents a single item in the list of favori
 - Tapping on the item card navigates to the item's details screen.
 - Tapping on the "Favorite" icon toggles the favorite status of the item.
 
+![favorite](https://github.com/sarguru1981/Coffee_Xpress/assets/4471129/eb0fd117-4f0c-42b5-a519-4811c05ecdff)
+
