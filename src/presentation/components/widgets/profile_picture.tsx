@@ -1,25 +1,45 @@
-import { StyleSheet, Image, View, Text } from 'react-native'
+import { StyleSheet, Image, View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { COLORS, FONTSIZE, SPACING } from '../../../util/themes/theme'
 import CustomIcon from './custom_icon';
 import { useStore } from '../../store/store';
 
-const ProfilePicture = () => {
-
+const ProfilePicture = ({ title, navigation }: any) => {
   const cartList = useStore((state: any) => state.CartList)
 
   return (
     <View style={styles.main_container}>
       <View style={styles.icon_container}>
-        <CustomIcon name='cart' color={COLORS.primaryLightGreyHex} size={SPACING.space_24} style={styles.cart_icon}/>
-        {cartList.length > 0 ? 
-        <View style={styles.circle_container}>
-          <Text style={styles.circle_text}>{cartList.length}</Text>
-        </View> : <></>}
+        {title !== 'Cart' || title === '' ? (
+          <TouchableOpacity onPress={() => navigation.navigate('cart')}>
+            <CustomIcon
+              name='cart'
+              color={COLORS.primaryLightGreyHex}
+              size={SPACING.space_24}
+              style={styles.cart_icon}
+            />
+          </TouchableOpacity>
+        ) : (
+          <></>
+        )}
+
+        {(title !== 'Cart' || title === '' ) && cartList.length > 0 ? (
+          <TouchableOpacity 
+            onPress={() => navigation.navigate('cart')}
+            style={styles.circle_container}>
+            <View >
+              <Text style={styles.circle_text}>{cartList.length}</Text>
+            </View>
+          </TouchableOpacity>
+        ) : (
+          <></>
+        )}
       </View>
       <View style={styles.image_container}>
-        <Image source={require('../../../assets/app_images/avatar.png')}
-          style={styles.image_style}/>
+        <Image
+          source={require('../../../assets/app_images/avatar.png')}
+          style={styles.image_style}
+        />
       </View>
     </View>
   )
