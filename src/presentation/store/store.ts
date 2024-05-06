@@ -11,7 +11,7 @@ export const useStore = create(
             CoffeeList: CoffeeData,
             BeanList: BeansData,
             CartPrice: 0,
-            FavoriteList: [],
+            FavoritesList: [],
             CartList: [],
             OrderHistoryList: [],
             addToCart: (cartItem: any) => {
@@ -28,7 +28,7 @@ export const useStore = create(
                             //same size as the new cart item's price. The return type of findIndex is annotated as number, 
                             //indicating the index of the found item or -1 if no matching item is found.
                             const existingPriceIndex: number = existingCartItem.prices.findIndex(
-                                (price: any) => price.size === cartItem.prices[0].size
+                              (price: any) => cartItem.prices[0] && price.size === cartItem.prices[0].size
                             );
 
                             if (existingPriceIndex !== -1) {
@@ -75,29 +75,106 @@ export const useStore = create(
                   })
                 )
             },
-            addToFavoriteList: (type: string, id: string) => {
+            toggleFavorite: (type: string, id: string) => 
+              set(
+                produce(state => {
+                  const listToSearch = type === 'Coffee' ? state.CoffeeList : state.BeanList;
+                  const item = listToSearch.find((item: any) => item.id === id);
+                  if (item) {
+                    const index = state.FavoritesList.findIndex((favItem: any) => favItem.id === id);
+
+                    if (!item.favourite) {
+                      item.favourite = true;
+                      if (index === -1) {
+                        state.FavoritesList.unshift(item);
+                      }
+                    } else {
+                      item.favourite = false;
+                      if (index !== -1) {
+                        state.FavoritesList.splice(index, 1);
+                      }
+                    }
+                  }
+                }),
+              ),
+              incrementCartItemQuantity: (id: string, size: string) => {
+                set(
+                  produce(state => {
+                    // Find the index of the cart item with the given id
+                    const cartItemIndex: number = state.CartList.findIndex((item: any) => item.id === id);
+                    // Check if the cart item exists
+                    if (cartItemIndex !== -1) {
+                      // Find the index of the price with the given size within the cart item's prices array
+                      const priceIndex: number = state.CartList[cartItemIndex].prices.findIndex((price: any) => price.size === size);
+                      // Check if the price exists
+                      if (priceIndex !== -1) {
+                        // Increment the quantity of the price
+                        state.CartList[cartItemIndex].prices[priceIndex].quantity++;
+                      }
+                    }
+                  })
+                )
+              },
+              decrementCartItemQuantity: (id: string, size: string) => {
                 set(
                   produce((state) => {
-                    const listToSearch = type === 'Coffee' ? state.CoffeeList : state.BeanList;
-                    const favoritesIndex = state.FavoritesList.findIndex((item: any) => item.id === id);
-              
-                    const listItem = listToSearch.find((item: any) => item.id === id);
-                    if (listItem) {
-                      if (!listItem.favourite) {
-                        listItem.favourite = true;
-                        if (favoritesIndex === -1) {
-                          state.FavoritesList.unshift(listItem);
-                        }
-                      } else {
-                        listItem.favourite = false;
-                        if (favoritesIndex !== -1) {
-                          state.FavoritesList.splice(favoritesIndex, 1);
+                    // Find the index of the cart item with the given id
+                    const cartItemIndex = state.CartList.findIndex((item: any) => item.id === id);
+                    // Check if the cart item exists
+                    if (cartItemIndex !== -1) {
+                      // Find the index of the price with the given size within the cart item's prices array
+                      const priceIndex = state.CartList[cartItemIndex].prices.findIndex((price: any) => price.size === size);
+                      // Check if the price exists
+                      if (priceIndex !== -1) {
+                        // Get the price object from the prices array
+                        const price = state.CartList[cartItemIndex].prices[priceIndex];
+                        // Check if the quantity of the price is greater than 1
+                        if (price.quantity > 1) {
+                          // If the quantity is greater than 1, decrement the quantity
+                          price.quantity--;
+                        } else {
+                          // If the quantity is 1 or less, remove the price from the prices array
+                          state.CartList[cartItemIndex].prices.splice(priceIndex, 1);
+                          // Check if the prices array became empty after removing the price
+                          if (state.CartList[cartItemIndex].prices.length === 0) {
+                            // If the prices array is empty, remove the cart item from the CartList
+                            state.CartList.splice(cartItemIndex, 1);
+                          }
                         }
                       }
                     }
                   })
                 )
-            }
-        }), {name:'coffee-app', storage: createJSONStorage(() => AsyncStorage)}
+              },
+              addToOrderHistoryListFromCart: () => {
+                set(
+                  produce((state) => {
+                    // Calculate the total price of items in the cart using reduce
+                    const totalPrice = state.CartList.reduce(
+                      (accumulator: number, currentValue: any) =>
+                        accumulator + parseFloat(currentValue.ItemPrice),
+                      0,
+                    );
+              
+                    // Add a new order to the beginning of the OrderHistoryList
+                    state.OrderHistoryList.unshift({
+                      // Create a new order with the current date and time
+                      OrderDate:
+                        new Date().toDateString() +
+                        ' ' +
+                        new Date().toLocaleTimeString(),
+                      // Include the items from the cart in the new order
+                      CartList: state.CartList,
+                      // Include the total price of items from the cart in the new order
+                      CartListPrice: totalPrice.toFixed(2).toString(),
+                    });
+              
+                    // Clear the cart after adding items to the order history
+                    state.CartList = [];
+                  }),
+                )
+              }
+        }
+      ), {name:'coffee-app', storage: createJSONStorage(() => AsyncStorage)}
     )
 )

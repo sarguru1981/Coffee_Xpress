@@ -1,6 +1,7 @@
 interface Spacing {
   space_2: number;
   space_4: number;
+  space_6: number;
   space_8: number;
   space_10: number;
   space_12: number;
@@ -18,6 +19,7 @@ interface Spacing {
 export const SPACING: Spacing = {
   space_2: 2,
   space_4: 4,
+  space_6: 6,
   space_8: 8,
   space_10: 10,
   space_12: 12,
