@@ -37,10 +37,20 @@ For more detailed documentation, see the [HomeScreen](./Readme/HomeScreen.md).
 
 ## Step 6: Designing the Product detail Screen and Developing business logic
 
-The business logic for Add to cart from Home scree and Product detail screen is implemented. The favoriting the product functionality is implemented
+The business logic for Add to cart from Home screen and Product detail screen is implemented. The favoriting the product functionality is implemented
 
 For more detailed documentation, see the [Product Detail](./Readme/ProductDetail.md).
 
 ![ProductDetail](https://github.com/sarguru1981/Coffee_Xpress/assets/4471129/864f344b-24ed-4a89-ad41-9893c9de59dc)
 
 
+## Step 7: Designing the Cart Screen and Developing business logic
+
+1. The business logic for Add to cart from Home screen and Product detail screen is implemented in the last section. 
+
+2. Opening an empty cart, shows an empty animation screen
+
+3. After adding the products in the cart, opening the screen shows the list of products with individual price and total price of the products
+
+
+For more detailed documentation, see the [Cart Screen](./Readme/CartScreen.md).
