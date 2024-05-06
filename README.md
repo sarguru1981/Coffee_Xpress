@@ -55,3 +55,9 @@ For more detailed documentation, see the [Product Detail](./Readme/ProductDetail
 For more detailed documentation, see the [Cart Screen](./Readme/CartScreen.md).
 
 ![cart](https://github.com/sarguru1981/Coffee_Xpress/assets/4471129/91332ea5-4865-44fc-8314-3cab2cd31c49)
+
+## Step 8: Favoriting the product and UI for the favorite screen
+
+For more detailed documentation, see the [Favorite Screen](./Readme/Favorite.md).
+
+![favorite](https://github.com/sarguru1981/Coffee_Xpress/assets/4471129/eb0fd117-4f0c-42b5-a519-4811c05ecdff)
