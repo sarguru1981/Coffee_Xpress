@@ -24,5 +24,4 @@ In this section, the business logic for add to cart, calculate the cart product 
 
 **Note:** The UI and business logic may change in the future based on the requirement.
 
-
-![Uploading ProductDetail.gif…]()
+![ProductDetail](https://github.com/sarguru1981/Coffee_Xpress/assets/4471129/864f344b-24ed-4a89-ad41-9893c9de59dc)
