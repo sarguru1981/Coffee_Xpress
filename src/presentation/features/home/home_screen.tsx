@@ -1,4 +1,4 @@
-import { Dimensions, StatusBar, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Dimensions, StatusBar, StyleSheet, Text, TextInput, ToastAndroid, TouchableOpacity, View } from 'react-native'
 import React, { useRef, useState } from 'react'
 import { BORDERRADIUS, COLORS, FONTFAMILY, FONTSIZE, SPACING } from '../../../util/themes/theme'
 import { ScrollView } from 'react-native'
@@ -29,6 +29,8 @@ const getCoffeeListForCategory = (category: string, data: any) => {
 }
 
 const HomeScreen = ({navigation}: any) => {
+  const addToCart = useStore((state: any) => state.addToCart);
+  const calculateCartPrice = useStore((state: any) => state.calculateCartPrice);
   const CoffeeList = useStore((state: any) => state.CoffeeList);
   const BeanList = useStore((state: any) => state.BeanList);
   const [categories, setCategories] = useState(getCategoriesFromData(CoffeeList));
@@ -62,6 +64,34 @@ const HomeScreen = ({navigation}: any) => {
     setSortedCoffee([...CoffeeList])
     setSearchText('');
   }
+
+  const coffeCardAddToCart = ({
+    id,
+    index,
+    name,
+    roasted,
+    imagelink_square,
+    special_ingredient,
+    type,
+    prices,
+  }: any) => {
+    addToCart({
+      id,
+      index,
+      name,
+      roasted,
+      imagelink_square,
+      special_ingredient,
+      type,
+      prices,
+    });
+    calculateCartPrice();
+    ToastAndroid.showWithGravity(
+      `${name} is Added to Cart`,
+      ToastAndroid.SHORT,
+      ToastAndroid.CENTER,
+    );
+  };
 
   return (
     <View style={styles.main_container}>
@@ -149,7 +179,11 @@ const HomeScreen = ({navigation}: any) => {
          data={sortedCoffee}
          renderItem={({item}) => {
             return <TouchableOpacity onPress={() => {
-              navigation.push('details')
+              navigation.push('details',{
+                index: item.index,
+                id: item.id,
+                type: item.type,
+              })
             }}>
               <CustomCard 
                 id={item.id}
@@ -161,7 +195,7 @@ const HomeScreen = ({navigation}: any) => {
                 average_rating={item.average_rating}
                 type={item.type}
                 index={item.index}
-                buttonPressHandler={()=> {}}
+                buttonPressHandler={coffeCardAddToCart}
                 />
             </TouchableOpacity>
          }}/>
@@ -182,7 +216,11 @@ const HomeScreen = ({navigation}: any) => {
          data={BeanList}
          renderItem={({item}) => {
             return <TouchableOpacity onPress={() => {
-              navigation.push('details')
+              navigation.push('details',{
+                index: item.index,
+                id: item.id,
+                type: item.type,
+              })
             }}>
               <CustomCard 
                 id={item.id}
@@ -194,7 +232,7 @@ const HomeScreen = ({navigation}: any) => {
                 average_rating={item.average_rating}
                 type={item.type}
                 index={item.index}
-                buttonPressHandler={()=> {}}
+                buttonPressHandler={coffeCardAddToCart}
                 />
             </TouchableOpacity>
          }}/>

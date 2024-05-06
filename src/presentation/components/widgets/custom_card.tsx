@@ -59,7 +59,16 @@ const CustomCard: React.FC<CustomCardProps> = ({
             <Text style={styles.currency}>$<Text style={styles.price_text}>{price.price}</Text></Text>
 
             {/* Product add button */}
-            <TouchableOpacity onPress={() => {}}>
+            <TouchableOpacity onPress={() => {buttonPressHandler({
+              id,
+              index,
+              type,
+              roasted,
+              imagelink_square,
+              name,
+              special_ingredient,
+              prices: [{...price, quantity: 1}],
+            });}}>
                 <CustomButtonIcon
                 name={'plus'}
                 size={FONTSIZE.size_10}

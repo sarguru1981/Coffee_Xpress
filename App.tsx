@@ -15,7 +15,7 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen
-          name="Tab"
+          name="tab"
           component={TabNavigator}
           options={{animation: 'slide_from_bottom'}}></Stack.Screen>
         <Stack.Screen name='cart' component={CartScreen} options={{animation: 'slide_from_bottom'}}/>
