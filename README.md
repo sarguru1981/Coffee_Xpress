@@ -52,5 +52,6 @@ For more detailed documentation, see the [Product Detail](./Readme/ProductDetail
 
 3. After adding the products in the cart, opening the screen shows the list of products with individual price and total price of the products
 
-
 For more detailed documentation, see the [Cart Screen](./Readme/CartScreen.md).
+
+![cart](https://github.com/sarguru1981/Coffee_Xpress/assets/4471129/91332ea5-4865-44fc-8314-3cab2cd31c49)
