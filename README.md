@@ -66,3 +66,6 @@ For more detailed documentation, see the [Favorite Screen](./Readme/Favorite.md)
 
 For more detailed documentation, see the [Payment Screen](./Readme/PaymentScreen.md).
 
+![Payment](https://github.com/sarguru1981/Coffee_Xpress/assets/4471129/78d396de-f885-4e42-92d1-a9ff45410371)
+
+
