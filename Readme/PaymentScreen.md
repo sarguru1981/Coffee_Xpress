@@ -32,6 +32,8 @@ To use these components in your React Native application, follow these steps:
 
 3. Customize the styles and functionalities as per your application's requirements.
 
+![Payment](https://github.com/sarguru1981/Coffee_Xpress/assets/4471129/78d396de-f885-4e42-92d1-a9ff45410371)
+
 ## Dependencies
 
 - **React Native**: This component is built using React Native framework.
