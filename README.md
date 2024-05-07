@@ -72,4 +72,7 @@ For more detailed documentation, see the [Payment Screen](./Readme/PaymentScreen
 
 For more detailed documentation, see the [Recent Order Screen](./Readme/RecentOrder.md).
 
+![recent_order](https://github.com/sarguru1981/Coffee_Xpress/assets/4471129/bf5f2cc5-1e8e-45a7-b6eb-b98f1c16ad02)
+
+
 
