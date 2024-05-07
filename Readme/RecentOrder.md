@@ -35,3 +35,6 @@ To use these components in your React Native application, follow these steps:
 ## Dependencies
 
 - **React Native**: This component is built using React Native framework.
+
+  ![recent_order](https://github.com/sarguru1981/Coffee_Xpress/assets/4471129/bf5f2cc5-1e8e-45a7-b6eb-b98f1c16ad02)
+
