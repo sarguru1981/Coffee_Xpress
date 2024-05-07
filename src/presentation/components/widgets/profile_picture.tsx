@@ -6,11 +6,10 @@ import { useStore } from '../../store/store';
 
 const ProfilePicture = ({ title, navigation }: any) => {
   const cartList = useStore((state: any) => state.CartList)
-
   return (
     <View style={styles.main_container}>
       <View style={styles.icon_container}>
-        {title !== 'Cart' || title === '' ? (
+        { title === undefined ? (
           <TouchableOpacity onPress={() => navigation.navigate('cart')}>
             <CustomIcon
               name='cart'

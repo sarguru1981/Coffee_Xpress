@@ -62,10 +62,17 @@ For more detailed documentation, see the [Favorite Screen](./Readme/Favorite.md)
 
 ![favorite](https://github.com/sarguru1981/Coffee_Xpress/assets/4471129/eb0fd117-4f0c-42b5-a519-4811c05ecdff)
 
-## Step 8: Payment screen design and functionality
+## Step 9: Payment screen design and functionality
 
 For more detailed documentation, see the [Payment Screen](./Readme/PaymentScreen.md).
 
 ![Payment](https://github.com/sarguru1981/Coffee_Xpress/assets/4471129/78d396de-f885-4e42-92d1-a9ff45410371)
+
+## Step 10: Recent Order design and functionality
+
+For more detailed documentation, see the [Recent Order Screen](./Readme/RecentOrder.md).
+
+![recent_order](https://github.com/sarguru1981/Coffee_Xpress/assets/4471129/bf5f2cc5-1e8e-45a7-b6eb-b98f1c16ad02)
+
 
 
